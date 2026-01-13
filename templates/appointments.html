@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <h2>Appointments</h2>
+    <form method="post">
+    <input name="patient" placeholder="Patient Name" required>
+    <input name="doctor" placeholder="Doctor Name" required>
+    <input name="duration" type="number" placeholder="Duration (hrs)" required>
+    <button type="submit">Book</button>
+    </form>
+
+    <table>
+    {% for a in appointments %}
+    <tr>{% for v in a %}<td>{{ v }}</td>{% endfor %}</tr>
+    {% endfor %}
+    </table>
+
+    <a href="/">Back</a>
+
+    
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+<h2>Patients</h2>
+<table>
+{% for p in patients %}
+<tr>{% for v in p %}<td>{{ v }}</td>{% endfor %}</tr>
+{% endfor %}
+</table>
+<a href="/">Back</a>

@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<h1>Hospital Management Dashboard</h1>
+<div class="cards">
+    <div class="card">Doctors: {{ doctors }}</div>
+    <div class="card">Patients: {{ patients }}</div>
+    <div class="card">Appointments: {{ appointments }}</div>
+</div>
+<nav>
+    <a href="/doctors">Doctors</a>
+    <a href="/patients">Patients</a>
+    <a href="/appointments">Appointments</a>
+</nav>
+</body>
+</html>
