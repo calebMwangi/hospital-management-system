@@ -1,0 +1,36 @@
+
+<<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Doctors</h1>
+</header>
+
+<nav>
+    <a href="/">Dashboard</a>
+    <a href="/patients">Patients</a>
+    <a href="/appointments">Appointments</a>
+</nav>
+
+<table>
+    <tr>
+        {% for i in range(10) %}
+        <th>Column {{ i+1 }}</th>
+        {% endfor %}
+    </tr>
+    {% for d in doctors %}
+    <tr>
+        {% for v in d %}
+        <td>{{ v }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
